@@ -294,7 +294,7 @@ void MavlinkInterface::SendGpsMessages(const SensorData::Gps &data) {
   hil_gps_msg.vd = data.velocity_down;
   hil_gps_msg.cog = data.cog;
   hil_gps_msg.satellites_visible = data.satellites_visible;
-  hil_gps_msg.id = data.id;
+  // hil_gps_msg.id = data.id;
 
   // send HIL_GPS Mavlink msg
   if (!hil_mode_ || (hil_mode_ && !hil_state_level_)) {
